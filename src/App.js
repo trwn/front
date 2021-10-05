@@ -68,7 +68,7 @@ function App() {
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
-        gasLimit:"285000",
+        gasLimit: "285000",
         from: blockchain.account,
         value: blockchain.web3.utils.toWei(
           (0.042 * _amount).toString(),
@@ -101,7 +101,21 @@ function App() {
 
   return (
     <s.Screen style={{ backgroundColor: "var(--blue)" }}>
-      <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
+      <s.Container
+        ai={"center"}
+        jc={"right"}
+        fd={"row"}
+        style={{ padding: 24 }}
+      >
+        <StyledButton
+          onClick={() => {
+            window.location.href = "https://psychpunks.xyz/";
+          }}
+        >
+          Main Page
+        </StyledButton>
+      </s.Container>
+      <s.Container flex={1} ai={"center"}>
         <s.TextTitle
           style={{ textAlign: "center", fontSize: 28, fontWeight: "bold" }}
         >
@@ -213,6 +227,11 @@ function App() {
             Please make sure you are connected to the right network (ETH
             Mainnet) and the correct address. Please note: Once you make the
             purchase, you cannot undo this action.
+          </s.TextDescription>
+        </s.Container>
+        <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
+          <s.TextDescription style={{ textAlign: "center", fontSize: 10 }}>
+            Contract address: 0x26582b17C733bBC60FA41c833c9D814FC9CC4B03
           </s.TextDescription>
         </s.Container>
       </s.Container>
