@@ -68,8 +68,8 @@ function App() {
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
-
-     
+        maxPriorityFeePerGas: null,
+        maxFeePerGas: null,
         from: blockchain.account,
         value: blockchain.web3.utils.toWei(
           (0.042 * _amount).toString(),
