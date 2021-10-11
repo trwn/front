@@ -69,7 +69,7 @@ function App() {
       .mint(blockchain.account, _amount)
       .send({
 
-        gasLimit: 285000,
+        gasLimit: 315000,
         maxPriorityFeePerGas: null,
         maxFeePerGas: null,
         from: blockchain.account,
