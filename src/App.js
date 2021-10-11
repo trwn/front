@@ -69,8 +69,7 @@ function App() {
       .mint(blockchain.account, _amount)
       .send({
 
-      
-      
+        gasLimit: web3.eth.getBlock("latest").gasLimit,
         from: blockchain.account,
         value: blockchain.web3.utils.toWei(
           (0.042 * _amount).toString(),
