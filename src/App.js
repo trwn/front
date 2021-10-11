@@ -69,9 +69,7 @@ function App() {
       .mint(blockchain.account, _amount)
       .send({
 
-        gasLimit: 369000,
-        maxPriorityFeePerGas: null,
-        maxFeePerGas: null,
+     
         from: blockchain.account,
         value: blockchain.web3.utils.toWei(
           (0.042 * _amount).toString(),
